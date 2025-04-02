@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Объявление массива размером 10
+        int[] array = new int[10];
+        // Заполнение массива числами из консоли
+        Console.WriteLine("Введите 10 чисел:");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.Write($"Элемент [{i}]: ");
+            array[i] = 10;
+        }
+        // Поиск минимального и максимального элементов
+        int min = array[0];
+        int max = array[0];
+
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (min > array[i])
+            {
+                min = array[i];
+            }
+            if (max < array[i])
+            {
+                max = array[i];
+            }
+        }
+        // Вывод минимального и максимального элементов
+        Console.WriteLine($"Минимальный элемент: {min}");
+        Console.WriteLine($"Максимальный элемент: {max}");
+    }
+}

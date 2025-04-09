@@ -1,0 +1,27 @@
+// одномерный массив
+int[] num = { 1, 2, 5, 22, 99, 44, };
+//           0 1 2 3 4 5 
+Console.WriteLine(num[4]);
+
+//двухмерный массив
+//int[,] num2;
+//num2 = new int[3, 5];
+//Console.WriteLine(num2[0,1]);
+
+int[,] array = new int[4, 5]
+{
+    {2,3,5,7,6 },
+    {21,32,56,75,66 },
+    {25,39,35,27,16 },
+    {62,36,35,97,62 },
+};
+Console.WriteLine(array[2, 3]);
+
+int[,] array2 = new int[3, 3];
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        array2[i, j] = i + j;
+    }
+}

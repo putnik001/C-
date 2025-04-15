@@ -1,0 +1,26 @@
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        int[,] num = new int[3, 3]
+{
+    { 12, 45, 42 },
+    { 32, 64, 93 },
+    { 54, 12, 35 }
+
+};
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.WriteLine(num[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}

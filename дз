@@ -1,0 +1,55 @@
+using System; 
+using System.Linq; 
+public static class Program 
+
+{ 
+
+    public static void Main()
+
+    {
+
+        int[,] num = new int[3, 4] {
+
+            {2,16,73,38},
+            {9,23,84,95},
+            {5,70,53,32}
+        };
+
+        int sum = 0;
+        int max = num[0, 0];
+        int min = num[0, 0];
+        Console.WriteLine("Ваш массив: ");
+
+        for (int i = 0; i < num.GetLength(0); i++)
+        {
+            for (int j = 0; j < num.GetLength(1); j++)
+            {
+               Console.Write(num[i, j] + " ");
+                sum += num[i, j];
+                
+                if (min > num[i, j])
+                {
+                    min = num[i, j];
+                }
+
+                else if (max < num[i, j])
+                {
+                    max = num[i, j];
+
+                }
+
+            }
+
+            Console.WriteLine();
+
+        }
+
+        Console.WriteLine($"Сумма вашего массива: {sum}");
+
+        Console.WriteLine($"Среднее арифметическое чисел массива: {sum / num.Length}");
+
+        Console.WriteLine($"Минимальное: {min}\nМаксимальное: {max}");
+
+    } 
+
+}

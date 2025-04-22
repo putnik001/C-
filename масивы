@@ -1,0 +1,39 @@
+
+using System;
+
+
+   class program {
+
+
+    static void Main() {
+
+        Random random = new Random();
+
+        //int number = random.Next(1, 10);
+        //Console.WriteLine(number);
+        //int newNumber = random.Next(10, 100);
+        //Console.WriteLine(newNumber);
+        //int num = random.Next(500, 1000);
+        //Console.WriteLine(num);
+        //int nam = random.Next(1000, 1300);
+        //Console.WriteLine(nam);
+        //int mam = random.Next(5000, 10000);
+        //Console.WriteLine(mam);
+
+        int[] nums = new int [6];
+        for (int i = 5; i < nums.Length; i++)
+        {
+        nums[0] = random.Next(500, 1000);
+        nums[1] = random.Next(1000, 2000);
+        nums[2] = random.Next(2000, 3000);
+        nums[3] = random.Next(3000, 4000);
+        nums[4] = random.Next(4000, 5000);
+        nums[5] = random.Next(5000, 6000);    
+        }
+
+
+        Console.WriteLine(nums[0]);
+
+
+    } 
+}

@@ -1,0 +1,37 @@
+using System;
+class program
+{
+    static void Main()
+    {
+        Random random = new Random();
+        Console.WriteLine("Введите количество строк (M): ");
+        int a = int.Parse(Console.ReadLine());
+        if (a < 1)
+        {
+            Console.WriteLine("Неправильно введенное число, повторите попытку! ");
+            goto start;
+        }
+    start:
+        Console.WriteLine("ведите количество столбцов (N):");
+        int b = int.Parse(Console.ReadLine());
+        if (b < 1)
+        {
+            Console.WriteLine("Неправильно введенное число, повтрите попытку! ");
+            goto start;
+        }
+
+        int[,] num = new int[a, b];
+        Console.WriteLine("Сгенерированная матрица: ");
+        for (int i = 0; i < num.GetLength(0); i++)
+        {
+            for (int j = 0; j < num.GetLength(1); j++)
+            {
+                num[i, j] = random.Next(-99, 99);
+                Console.Write(num[i, j] + "\t" );
+            }
+            Console.WriteLine();
+
+        }
+
+    }
+}

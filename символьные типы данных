@@ -1,0 +1,30 @@
+using System;
+class program
+{
+    static void Main()
+    {
+        char sim = 'a';
+        char sim2 = '1';
+        char sim3 = 'A';
+        char sim4 = '5';
+        char sim5 = 'a';
+        char sim6= '\n';
+
+        char c = '\n';
+        Console.WriteLine($"Символ '\\n' управляющий? {char.IsControl(c)}");
+
+        char abc1 = '7';
+        Console.WriteLine($" Является ли '7' числом? {char.IsDigit(abc1)}"); 
+
+        char abc2 = '\t';
+        Console.WriteLine($" Является ли '\\t' симыолом? {char.IsControl(abc2)}");
+
+        char abc3 = '0';
+        Console.WriteLine($" Является ли '0' цифрой? {char.IsControl(abc3)}");
+
+        Console.WriteLine(char.IsLower('а'));
+        Console.WriteLine(char.IsLetter('Я'));
+        Console.WriteLine(char.IsUpper('z'));
+        Console.WriteLine(char.IsSeparator(' '));
+    }
+}

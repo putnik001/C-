@@ -1,8 +1,3 @@
-using System;
-class program
-{
-    static void Main()
-    {
         Random random = new Random();
         Console.WriteLine("Введите количество строк (M): ");
         int a = int.Parse(Console.ReadLine());
@@ -27,11 +22,33 @@ class program
             for (int j = 0; j < num.GetLength(1); j++)
             {
                 num[i, j] = random.Next(-99, 99);
-                Console.Write(num[i, j] + "\t" );
+                Console.Write(num[i, j] + "\t");
             }
             Console.WriteLine();
 
         }
 
-    }
-}
+        Console.WriteLine("Введите число для проверки его нахождения в матрице: ");
+        int eve = int.Parse(Console.ReadLine());
+        int ava = 0;
+        Console.WriteLine("Ищу сложности");
+
+        for (int i = 0; i < num.GetLength(0); i++)
+        {
+            for (int j = 0; j < num.GetLength(1); j++)
+            {
+                if (eve == num[i, j])
+                {
+                    Console.WriteLine($"Найдено под индексом: [{i},{j}]");
+                    ava++;                       
+                }
+            }
+        }
+        if (ava > 0)
+        {
+            Console.WriteLine($"Найдено схожих чисел: {ava}");
+        }
+        else
+        {
+            Console.WriteLine("Схожих чисел не найдно.");
+        }

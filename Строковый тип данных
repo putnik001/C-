@@ -1,0 +1,22 @@
+//string city = "magas";
+//Console.WriteLine($"{ city[2]}{city[3]}{city[4]}");
+
+//Console.WriteLine($"Символов в слове: {city.Length}");
+//string message = "Здраствуйте Тимур";
+
+//for (int i = 0; i < message.Length; i++)
+//{
+//    Console.WriteLine(message[i]);
+//}
+//string a = "Maga";
+//string b = "maga";
+//Console.WriteLine(a == b);
+
+//string trimmed = " text ".Trim(); 
+
+Console.WriteLine("Введите строку");
+string abc = Console.ReadLine();
+Console.WriteLine($"Длина строки: {abc.Length}");
+Console.WriteLine($"Первый символ: {abc[0]}, последний символ: {abc[abc.Length - 1]}.");
+Console.WriteLine($"Верхний регистр: {abc.ToUpper()}");
+Console.WriteLine($"Нижний регистр: {abc.ToLower()}");

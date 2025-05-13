@@ -1,0 +1,81 @@
+//int[] number = { 1, 33, 44, 5, 6, 7, 9 };
+//foreach (int item in number)
+//{
+//    Console.WriteLine(item);
+//}
+
+//string[] name = {" Хамза", "евлоев", "Артам", "Анзор"};
+//foreach (string item in name)
+//{
+
+//    if (item == "Хамза")
+//    {
+//        Console.WriteLine($"{item} наш слоняра");
+//    }
+//    else if (item == "Артам")
+//    {
+//        Console.WriteLine($"{item} хирень");
+//    }
+//}
+
+//string[] strs = { "один", "два", "три", "два", "один", };
+//foreach (string s in strs)
+//{
+//    switch(s)
+//    {
+//        case "один":
+//            Console.WriteLine(1);
+//            break;
+//        case "два":
+//            Console.WriteLine(2);
+//            break;
+//        case "три":
+//            Console.WriteLine(3);
+//            break;
+//    }
+
+//}
+//Console.WriteLine();
+string[] nume = new string[6];
+Console.WriteLine("Добро пожаловать в менеджер строковых массивов! ");
+Console.WriteLine("Доступные команды:");
+Console.WriteLine("fill - заполнить массив  \nshow - показать массив  \nmaxlen - найти самую длинную строку  \nexit - выйти  ");
+while (true)
+{
+    Console.WriteLine("\nВведите команду");
+    string name = Console.ReadLine();
+    switch(name)
+    {
+        case "fill":
+            Console.WriteLine($"Введите {nume.Length} строк для заполнения массива:");
+            for (int i = 0; i < nume.Length; i++)
+            {
+                Console.WriteLine($"Строка {i + 1}: ");
+                nume[i] = Console.ReadLine();
+            }
+            Console.WriteLine("Массив заполнен! ");
+            break;
+
+        case "show":
+            Console.WriteLine("Текущий массив: ");
+            for (int i = 0; i < nume.Length; i++)
+            {
+                Console.WriteLine($"[{i}] {nume[i]}");
+            }
+            break;
+
+        case "maxlen":
+            int maximum = 0;
+            for (int i = 0; i < nume.Length; i++)
+            {
+                if (maximum < nume[i].Length)
+                {
+                    maximum = 1;
+                }
+
+            }
+            Console.WriteLine($"Самая длинная строка: индекс {maximum}, длина {nume[maximum].Length}, значение: '{nume[maximum]}' ");
+            break;
+
+    }
+}

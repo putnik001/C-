@@ -1,0 +1,54 @@
+class Program
+{
+
+    static string nam(string num)
+    {
+        Console.WriteLine("Введите ваше имя: ");
+        string n = Console.ReadLine();
+        Console.WriteLine($"Здраствуйте {n}");
+        if (n == "Хамза")
+        {
+            Console.WriteLine("красавчик");
+        }
+        else
+        {
+            Console.WriteLine("встал и вышел вон");
+        }
+
+        Console.WriteLine("Решите пример: 2 + 2");
+        int b = int.Parse(Console.ReadLine());
+        if (b == 4)
+        {
+            Console.WriteLine($"{b} правильный ответ.");
+        }
+        else
+        {
+            Console.WriteLine($"{b} неправильный ответ");
+        }
+
+        Console.WriteLine("Активироать цикл?");
+        string a = Console.ReadLine();
+        if (a == "Да")
+        {
+            Console.WriteLine("Сколько раз будет активирован цикл?");
+            int m = int.Parse(Console.ReadLine());
+            for (int i = 0; i <= m; i++)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("Цикл завершен");
+        }
+        if (a == "Нет")
+        {
+            Console.WriteLine("Хорошо, как скажете");
+        }
+        return "";
+    }
+    static void Main()
+    {
+
+       nam("");
+       
+
+    }
+}

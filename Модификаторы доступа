@@ -1,0 +1,66 @@
+//User alex = new User();
+//alex.Info();
+
+//NewUser maga = new NewUser();
+//maga.NewInfo();
+//class User
+//{
+//    private int id = 1;
+//    public string name = "Alexand";
+//    protected string keyCar = "Ключи от BMW";
+
+//    public void Info()
+//    {
+//        Console.WriteLine(id);
+//        Console.WriteLine(name);
+//    }
+//}
+
+
+//class NewUser: User
+//{
+//    private int id = 1;
+//    public string name = "Maga";
+//    public void NewInfo()
+//    {
+//        Console.WriteLine(name);
+//        Console.WriteLine(keyCar);
+//    }
+//}
+
+Dodge alex = new Dodge();
+alex.Model();
+alex = new NewDodge();
+
+class Dodge
+{
+    public string marka = "Dodge";
+    public string name = "Dodge Challenger Hellcat";
+    public int age = 2015;
+    public string color = "Черный";
+
+    public void Model()
+    {
+        Console.WriteLine("Dodge \nПоказать характеристики?");
+        string a = Console.ReadLine();
+
+        if (a == "Да")
+        {
+            Console.WriteLine($"Марка: {marka} \nМодель: {name} \nГод выпуска: {age} \nЦвет: {color}");
+        }
+    }
+
+
+}
+
+class NewDodge : Dodge
+{
+    
+    public string name = "Dodge Demon";
+    public int age = 2016;
+    public void NewModel()
+    {
+        Console.WriteLine("Новая модель:");
+        Console.WriteLine($"Марка: {marka} \nМодель: {name} \nГод выпуска: {age} \nЦвет: {color}");
+    }
+}

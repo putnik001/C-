@@ -1,0 +1,41 @@
+
+//User user2 = new User("ali" , 29 , "Назрань");
+//Console.WriteLine($"Имя: {user2.name} \nВзозраст: {user2.age} \nАдрес: {user2.adres}");
+
+//class User // шаблон (класс)
+//{
+//    public string name;// ключ класса
+//    public int age;
+//    public string adres;
+
+//    public User(string newName , int newAge , string newAdres)
+//    {
+//        name = newName;
+//        age = newAge;
+//        adres = newAdres;
+//    }
+
+//    public void Print()
+//    {
+//        Console.WriteLine();
+//    }
+//}
+
+User masin = new User("Dodge", "Dodge Charger HellCat", 2015, "Черный");
+Console.WriteLine($"Марка: {masin.marka} \nМодель: {masin.model} \nГод: {masin.age} \nЦвет: {masin.color}");
+
+class User
+{
+    public string marka;
+    public string model;
+    public int age;
+    public string color;
+
+    public User(string newMarka, string newModel, int newAge, string newColor)
+    {
+        marka = newMarka;
+        model = newModel;
+        age = newAge;
+        color = newColor;
+    }
+}

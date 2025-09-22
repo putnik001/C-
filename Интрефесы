@@ -1,0 +1,51 @@
+//Service service = new Service();
+//service.Info("Ошибка");
+
+//Service2 service2 = new Service2();
+//service2.Info("Ошибка");
+//public interface Ilogger
+//{
+//    void Info(string message);// метод который объявл в интерф
+//}
+
+//public class Service : Ilogger // наследованиее интерфейса
+//{
+//    public void Info(string message) // вызов метода ИНТЕРФЕЙСА
+//    {
+//        Console.WriteLine(message);
+//    }
+//}
+
+//public class Service2 : Ilogger
+//{
+//    public void Info(string message)
+//    {
+//        Console.WriteLine($"{message} , {2 + 2} abc");
+//    }
+
+//}
+Colleg2 colleg = new Colleg2();
+colleg.Info("Иван");
+colleg.Error("Ваня");
+
+public interface Ilogger
+{
+    string Name { get; } 
+    void Info(string student);
+    void Error(string ticher);
+}
+
+class Colleg2 : Ilogger
+{
+    public string Name { get; } = "2П1";
+    public void Info(string student)
+    {
+        Console.WriteLine($"{student} ,  {2 + 5} abc группа: {Name}");
+    }
+
+    public void Error(string teacher)
+    {
+        Console.WriteLine($"{teacher} , {3 + 3} def группа: {Name} ");
+    }
+    
+}
